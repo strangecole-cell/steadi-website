@@ -1,0 +1,21 @@
+node_modules/
+package.json
+package-lock.json
+
+# Original uploaded source files (large binaries)
+*.docx
+*.pptx
+Design Files 18 March 2026-20260325T141058Z-1-001.zip
+
+# Temp directories
+assets_temp/
+font_temp/
+pptx_extract/
+design_files/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
