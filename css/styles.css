@@ -348,11 +348,15 @@ ul, ol {
 
 .hero__pattern {
   position: absolute;
-  inset: 0;
-  opacity: 0.06;
-  background-image: url('../assets/patterns/waves pattern.svg');
-  background-size: 600px;
-  background-repeat: repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 320px;
+  opacity: 0.45;
+  background-image: url('../assets/patterns/Steadi%20Waves.png');
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
   pointer-events: none;
 }
 
@@ -401,6 +405,127 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero__product-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* ---- Supplement Facts Panel ---- */
+
+.supp-facts {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(33, 33, 32, 0.1);
+  border-radius: 12px;
+  padding: 20px 18px;
+  width: 200px;
+  flex-shrink: 0;
+  align-self: center;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.supp-facts--image {
+  padding: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.supp-facts--image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.supp-facts__title {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-carbon);
+  margin-bottom: 4px;
+}
+
+.supp-facts__serving {
+  font-size: 10px;
+  color: rgba(33, 33, 32, 0.55);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.supp-facts__divider {
+  height: 1px;
+  background-color: rgba(33, 33, 32, 0.12);
+  margin: 8px 0;
+}
+
+.supp-facts__divider--heavy {
+  height: 6px;
+  background-color: rgba(33, 33, 32, 0.75);
+  margin: 6px 0;
+}
+
+.supp-facts__sub td:first-child {
+  padding-left: 14px;
+  font-style: italic;
+  color: rgba(33, 33, 32, 0.6);
+}
+
+.supp-facts__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  color: var(--color-carbon);
+}
+
+.supp-facts__table th {
+  text-align: left;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(33, 33, 32, 0.5);
+  padding-bottom: 6px;
+}
+
+.supp-facts__table th:last-child,
+.supp-facts__table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.supp-facts__table td {
+  padding: 5px 0;
+  border-top: 1px solid rgba(33, 33, 32, 0.07);
+  line-height: 1.4;
+  vertical-align: top;
+}
+
+.supp-facts__table td em {
+  display: block;
+  font-style: normal;
+  font-size: 9px;
+  color: rgba(33, 33, 32, 0.45);
+}
+
+.supp-facts__footnote {
+  font-size: 9px;
+  color: rgba(33, 33, 32, 0.45);
+  margin-top: 6px;
+}
+
+.supp-facts__other {
+  font-size: 9px;
+  color: rgba(33, 33, 32, 0.45);
+  margin-top: 4px;
+  line-height: 1.5;
 }
 
 /* ---- Product Showcase ---- */
@@ -645,8 +770,9 @@ ul, ol {
 .benefit-card__title {
   font-family: var(--font-heading);
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 14px;
+  text-shadow: 0 1px 8px rgba(33, 33, 32, 0.12);
 }
 
 .benefit-card__text {
@@ -680,27 +806,27 @@ ul, ol {
 
 .ingredients-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   margin-bottom: 56px;
 }
 
 .ingredient-card {
   background-color: var(--color-ivory);
-  border-radius: 16px;
-  padding: 40px;
-  transition: transform 0.3s var(--ease-out);
+  border-radius: 20px;
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
 }
 
 .ingredient-card--featured {
-  grid-column: 1 / -1;
   background-color: var(--color-garden-green);
   color: var(--color-white);
-  padding: 56px 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .ingredient-card--featured .ingredient-card__amount {
@@ -726,14 +852,46 @@ ul, ol {
 }
 
 .ingredient-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(33, 33, 32, 0.08);
+}
+
+.ingredient-card--featured:hover {
+  box-shadow: 0 16px 40px rgba(33, 33, 32, 0.2);
+}
+
+/* Decorative watermark dose in featured card */
+.ingredient-card--featured::after {
+  content: "600";
+  position: absolute;
+  bottom: -16px;
+  right: -8px;
+  font-family: var(--font-heading);
+  font-size: 120px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.07);
+  line-height: 1;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .ingredient-card__name {
   font-family: var(--font-heading);
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+}
+
+.ingredient-card__species {
+  font-size: 13px;
+  color: rgba(33, 33, 32, 0.45);
+  margin-bottom: 8px;
+  font-style: normal;
+}
+
+.ingredient-card--featured .ingredient-card__species {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .ingredient-card__amount {
@@ -804,7 +962,7 @@ ul, ol {
 }
 
 .story__inner {
-  max-width: var(--container-narrow);
+  max-width: var(--container-max);
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -1041,6 +1199,58 @@ ul, ol {
   transform: translateY(0);
 }
 
+/* ---- Founders Grid ---- */
+
+.story__intro {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(33, 33, 32, 0.6);
+  font-weight: 300;
+  max-width: 640px;
+  margin: 0 auto 48px;
+}
+
+.founders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  text-align: left;
+}
+
+.founder-card {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(33, 33, 32, 0.08);
+  border-radius: 16px;
+  padding: 36px 32px;
+}
+
+.founder-card__header {
+  margin-bottom: 16px;
+}
+
+.founder-card__name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-carbon);
+  margin-bottom: 4px;
+}
+
+.founder-card__role {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-garden-green);
+}
+
+.founder-card p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(33, 33, 32, 0.65);
+  font-weight: 300;
+}
+
 /* ============================================
    FOOTER
    ============================================ */
@@ -1099,6 +1309,28 @@ ul, ol {
 
 .footer__link:hover {
   color: rgba(255, 255, 255, 0.9);
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer__contact-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footer__contact-email {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+}
+
+.footer__contact-email:hover {
+  color: rgba(255, 255, 255, 1);
 }
 
 .footer__divider {
@@ -1211,7 +1443,7 @@ ul, ol {
 
   /* Sections */
   .hero {
-    min-height: auto;
+    min-height: 0;
     padding-top: calc(var(--nav-height) + 40px);
     padding-bottom: 60px;
   }
@@ -1250,6 +1482,22 @@ ul, ol {
     font-size: 17px;
   }
 
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero__product-inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .supp-facts {
+    width: 100%;
+    max-width: 320px;
+  }
+
   .footer__top,
   .footer__bottom {
     flex-direction: column;
@@ -1268,6 +1516,10 @@ ul, ol {
 
   .footer__disclaimer {
     text-align: center;
+  }
+
+  .footer__contact {
+    align-items: center;
   }
 }
 

@@ -68,36 +68,55 @@
         </div>
       </div>
       <div class="hero__product reveal reveal-delay-2">
-        <div class="product-showcase">
-          <!-- Glow ring behind bottle -->
-          <div class="product-showcase__glow" aria-hidden="true"></div>
-
-          <!-- Botanical leaf accents -->
-          <div class="product-showcase__leaf product-showcase__leaf--1" aria-hidden="true">
-            <svg viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M40 0C40 0 80 40 80 80C80 120 40 120 40 120C40 120 0 120 0 80C0 40 40 0 40 0Z" fill="currentColor" opacity="0.15"/>
-              <path d="M40 10V110M25 40Q40 55 55 40M20 65Q40 80 60 65" stroke="currentColor" stroke-width="1" opacity="0.2"/>
-            </svg>
+        <div class="hero__product-inner">
+          <div class="supp-facts">
+            <p class="supp-facts__title">Supplement Facts</p>
+            <p class="supp-facts__serving">Serving Size 2 Capsules &middot; 30 Servings</p>
+            <div class="supp-facts__divider"></div>
+            <table class="supp-facts__table">
+              <thead>
+                <tr>
+                  <th>Ingredient</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SteadiBurn&trade; <em>(Berberine HCL, Inulin)</em></td>
+                  <td>600 mg</td>
+                </tr>
+                <tr>
+                  <td>Black Cohosh Extract <em>(Root &amp; Rhizome)</em> <em>Cimicifuga racemosa L.</em></td>
+                  <td>40 mg</td>
+                </tr>
+                <tr>
+                  <td>Rhubarb Root Extract <em>Rheum rhaponticum</em></td>
+                  <td>4 mg</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="supp-facts__divider"></div>
+            <p class="supp-facts__footnote">* Daily value not established.</p>
+            <p class="supp-facts__other">Vegan capsule &middot; No artificial fillers &middot; Made in the USA</p>
           </div>
-          <div class="product-showcase__leaf product-showcase__leaf--2" aria-hidden="true">
-            <svg viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M30 0C30 0 60 30 60 60C60 100 30 100 30 100C30 100 0 100 0 60C0 30 30 0 30 0Z" fill="currentColor" opacity="0.12"/>
-              <path d="M30 8V92M18 35Q30 48 42 35" stroke="currentColor" stroke-width="1" opacity="0.18"/>
-            </svg>
-          </div>
 
-          <!-- Actual bottle render from brand deck -->
-          <div class="product-bottle-render">
-            <img src="assets/product/steadibottle.1.png" alt="Steadi Core Momentum — Daily Menopause Support bottle, 60 vegan capsules" width="740" height="880">
-          </div>
+          <div class="product-showcase">
+            <!-- Glow ring behind bottle -->
+            <div class="product-showcase__glow" aria-hidden="true"></div>
 
-          <!-- Shadow underneath -->
-          <div class="product-showcase__shadow" aria-hidden="true"></div>
+            <!-- Actual bottle render from brand deck -->
+            <div class="product-bottle-render">
+              <img src="assets/product/steadibottle.1.png" alt="Steadi Menopause Metabolic Complex — Daily Menopause Support bottle, 60 vegan capsules" width="740" height="880">
+            </div>
 
-          <!-- Trust badges -->
-          <div class="product-showcase__badges">
-            <span class="product-showcase__badge">60 Vegan Capsules</span>
-            <span class="product-showcase__badge">30-Day Supply</span>
+            <!-- Shadow underneath -->
+            <div class="product-showcase__shadow" aria-hidden="true"></div>
+
+            <!-- Trust badges -->
+            <div class="product-showcase__badges">
+              <span class="product-showcase__badge">60 Vegan Capsules</span>
+              <span class="product-showcase__badge">30-Day Supply</span>
+            </div>
           </div>
         </div>
       </div>
@@ -184,9 +203,8 @@
 
       <div class="ingredients-list">
         <div class="ingredient-card ingredient-card--featured reveal reveal-delay-1">
-          <span class="ingredient-card__badge">Proprietary Blend</span>
-          <h3 class="ingredient-card__name">SteadiBurn</h3>
-          <p class="ingredient-card__amount">Berberine HCL &amp; Inulin &middot; 600 mg</p>
+          <h3 class="ingredient-card__name">SteadiBurn&trade;</h3>
+          <p class="ingredient-card__amount">Proprietary Blend &middot; Berberine HCL &amp; Inulin &middot; 600 mg</p>
           <p class="ingredient-card__desc">
             Formulated to support healthy metabolic function and satiety pathways.*
           </p>
@@ -194,6 +212,7 @@
 
         <div class="ingredient-card reveal reveal-delay-2">
           <h3 class="ingredient-card__name">Black Cohosh Extract</h3>
+          <p class="ingredient-card__species"><em>Cimicifuga racemosa L.</em></p>
           <p class="ingredient-card__amount">Root &amp; Rhizome &middot; 40 mg</p>
           <p class="ingredient-card__desc">
             One of the most studied botanicals for menopausal comfort and hormonal support.*
@@ -201,8 +220,9 @@
         </div>
 
         <div class="ingredient-card reveal reveal-delay-3">
-          <h3 class="ingredient-card__name">Rhubarb Extract (Root)</h3>
-          <p class="ingredient-card__amount">Traditional botanical</p>
+          <h3 class="ingredient-card__name">Rhubarb Extract</h3>
+          <p class="ingredient-card__species"><em>Rheum rhaponticum</em></p>
+          <p class="ingredient-card__amount">Root &middot; 4 mg</p>
           <p class="ingredient-card__desc">
             Clinically studied to support menopausal comfort, including hot flashes and mood.*
           </p>
@@ -229,19 +249,25 @@
     <div class="story__pattern" aria-hidden="true"></div>
     <div class="story__inner">
       <h2 class="story__headline reveal">Why We Built Steadi</h2>
-      <div class="story__body">
-        <p class="reveal reveal-delay-1">
-          Cole Strange, PA-C, spent years in emergency medicine and didn't expect the job to change him the way it did. The schedule wore down his sleep first, then everything else followed. His energy dropped, his patience shortened, his focus slipped, and he started noticing things that felt off, like brain fog that wouldn't clear and a version of himself that felt harder to access. At home, with his wife and two young boys, he could feel the gap between who he wanted to be and how he was actually showing up.
-        </p>
-        <p class="reveal reveal-delay-2">
-          What stayed with him most was that it didn't feel random. He was seeing the same kind of strain in the patients he treated every day, different stories on the surface, but underneath, the same patterns tied to disrupted sleep, chronic stress, and a body that just wasn't responding the way it used to. It forced him to look at health differently, less about isolated symptoms and more about how the body handles pressure over time.
-        </p>
-        <p class="reveal reveal-delay-3">
-          When he stepped away from the ER, it wasn't to walk away from medicine, it was to move closer to that understanding. Perimenopause and menopause stood out quickly, not because they are simple, but because they aren't. It's a stage where so many women start to feel like their body has changed the rules overnight, sleep becomes unpredictable, energy fades at the wrong times, weight shifts without explanation, and even their thoughts and emotions can feel unfamiliar. It's frustrating, and often dismissed or oversimplified.
-        </p>
-        <p class="reveal reveal-delay-4">
-          Steadi was built from that awareness, with respect for how real and layered this experience is, and with a focus on supporting the systems underneath it in a way that makes sense, using ingredients that have been studied and an approach that doesn't talk over women or reduce what they're going through, but instead meets them where they are.
-        </p>
+      <p class="story__intro reveal reveal-delay-1">Steadi was built by people who have seen firsthand how much this transition matters — and how rarely it's met with a product that actually takes it seriously.</p>
+      <div class="founders-grid">
+        <div class="founder-card reveal reveal-delay-2">
+          <div class="founder-card__header">
+            <h3 class="founder-card__name">Cole Strange, PA-C</h3>
+            <p class="founder-card__role">Technical Founder</p>
+          </div>
+          <p>Cole Strange, PA-C, spent years in emergency medicine and didn't expect the job to change him the way it did. The schedule wore down his sleep first, then everything else followed. His energy dropped, his patience shortened, his focus slipped, and he started noticing things that felt off — brain fog that wouldn't clear and a version of himself that felt harder to access. At home, with his wife and two young boys, he could feel the gap between who he wanted to be and how he was actually showing up.</p>
+          <p>What stayed with him most was that it didn't feel random. He was seeing the same kind of strain in the patients he treated every day — different stories on the surface, but underneath, the same patterns tied to disrupted sleep, chronic stress, and a body that just wasn't responding the way it used to. It forced him to look at health differently, less about isolated symptoms and more about how the body handles pressure over time.</p>
+          <p>When he stepped away from the ER, it wasn't to walk away from medicine — it was to move closer to that understanding. Perimenopause and menopause stood out quickly, not because they are simple, but because they aren't. It's a stage where so many women start to feel like their body has changed the rules overnight. Sleep becomes unpredictable, energy fades at the wrong times, weight shifts without explanation, and even thoughts and emotions can feel unfamiliar. It's frustrating, and often dismissed or oversimplified.</p>
+          <p>Steadi was built from that awareness — with respect for how real and layered this experience is, and with a focus on supporting the systems underneath it in a way that makes sense, using ingredients that have been studied and an approach that doesn't talk over women or reduce what they're going through, but instead meets them where they are.</p>
+        </div>
+        <div class="founder-card reveal reveal-delay-3">
+          <div class="founder-card__header">
+            <h3 class="founder-card__name">Eric</h3>
+            <p class="founder-card__role">Co-Founder</p>
+          </div>
+          <p>Eric has spent 15+ years working at the intersection of science, consumer behavior, and consumer products. He holds a degree in Biological Sciences and an MBA, and has published multiple peer-reviewed research papers. He started his career at Procter &amp; Gamble in product R&amp;D before moving into brand and commercial roles — including vitamins and supplements across the US, Canada, and UK. At Intrinsic, a health and wellness startup, he led women's health products from technical development through go-to-market. His approach is straightforward: the product has to be grounded in solid science, and it has to work for real people.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -261,19 +287,19 @@
 
       <div class="faq__list">
         <div class="faq-item reveal">
-          <button class="faq-item__question" aria-expanded="false">
-            <span>What is Steadi Daily Menopause Support?</span>
+          <button type="button" class="faq-item__question" aria-expanded="false">
+            <span>What is Steadi Metabolic Complex?</span>
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
           <div class="faq-item__answer" role="region">
             <div class="faq-item__answer-inner">
-              <p>Steadi is a daily dietary supplement formulated with evidence-based ingredients to support women through perimenopause and menopause. It combines targeted botanicals and nutrients to help support metabolic health, menopausal comfort, and emotional balance.*</p>
+              <p>Steadi Metabolic Complex is a daily dietary supplement formulated with evidence-based ingredients to support women through perimenopause and menopause. It combines targeted botanicals and nutrients to help support metabolic health, menopausal comfort, and emotional balance.*</p>
             </div>
           </div>
         </div>
 
         <div class="faq-item reveal reveal-delay-1">
-          <button class="faq-item__question" aria-expanded="false">
+          <button type="button" class="faq-item__question" aria-expanded="false">
             <span>How long until I feel results?</span>
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
@@ -285,7 +311,31 @@
         </div>
 
         <div class="faq-item reveal reveal-delay-1">
-          <button class="faq-item__question" aria-expanded="false">
+          <button type="button" class="faq-item__question" aria-expanded="false">
+            <span>How should I take this product?</span>
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__answer" role="region">
+            <div class="faq-item__answer-inner">
+              <p>Take 2 capsules daily, preferably with a meal. Do not exceed the recommended dosage. Store in a cool, dry place. Each bottle contains 60 capsules — a full 30-day supply.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <button type="button" class="faq-item__question" aria-expanded="false">
+            <span>Are there any warnings I should know about?</span>
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__answer" role="region">
+            <div class="faq-item__answer-inner">
+              <p>Do not use if you are pregnant or nursing. Consult your healthcare provider before use if you have a medical condition, are taking medications (especially for blood sugar, blood pressure, or liver conditions), or have a history of hormone-sensitive conditions. Discontinue use and consult a healthcare provider if you experience unusual symptoms such as abdominal pain, dark urine, jaundice, or persistent headaches. Not intended for persons under 18. Keep out of reach of children. Do not use if the safety seal is broken or missing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <button type="button" class="faq-item__question" aria-expanded="false">
             <span>Is Steadi safe to take with other medications?</span>
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
@@ -297,19 +347,31 @@
         </div>
 
         <div class="faq-item reveal reveal-delay-2">
-          <button class="faq-item__question" aria-expanded="false">
-            <span>What's the recommended dosage?</span>
+          <button type="button" class="faq-item__question" aria-expanded="false">
+            <span>Where is your product made?</span>
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
           <div class="faq-item__answer" role="region">
             <div class="faq-item__answer-inner">
-              <p>Take 2 capsules daily, preferably with a meal. Each bottle contains 60 capsules — a full 30-day supply.</p>
+              <p>We spoke with nearly two dozen manufacturers before choosing our partner. Our supplements are made in the United States in a cGMP certified, FDA registered, and SQF audited facility. We looked closely at how they source, how they test, and how they run production day to day. This is not something we take on trust — it's something we verify.</p>
             </div>
           </div>
         </div>
 
-        <div class="faq-item reveal reveal-delay-2">
-          <button class="faq-item__question" aria-expanded="false">
+        <div class="faq-item reveal reveal-delay-3">
+          <button type="button" class="faq-item__question" aria-expanded="false">
+            <span>Are your supplements third-party tested?</span>
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__answer" role="region">
+            <div class="faq-item__answer-inner">
+              <p>Yes. Our products are tested at three stages: raw ingredients are tested by suppliers, the manufacturer verifies raw materials before production, and we perform finished product testing through ISO certified third-party laboratories. We check for purity, identity, and contamination — including heavy metals and microbial contaminants. It adds time and cost, but it's the only way to be confident in what goes into the bottle.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-3">
+          <button type="button" class="faq-item__question" aria-expanded="false">
             <span>Is this product vegan?</span>
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
@@ -321,7 +383,19 @@
         </div>
 
         <div class="faq-item reveal reveal-delay-3">
-          <button class="faq-item__question" aria-expanded="false">
+          <button type="button" class="faq-item__question" aria-expanded="false">
+            <span>Does this product contain soy?</span>
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__answer" role="region">
+            <div class="faq-item__answer-inner">
+              <p>This product is made without soy.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-3">
+          <button type="button" class="faq-item__question" aria-expanded="false">
             <span>Where can I buy Steadi?</span>
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
@@ -359,6 +433,10 @@
           <a href="#ingredients" class="footer__link">Ingredients</a>
           <a href="#our-story" class="footer__link">Our Story</a>
           <a href="#faq" class="footer__link">FAQ</a>
+        </div>
+        <div class="footer__contact">
+          <p class="footer__contact-label">Questions? Reach us at</p>
+          <a href="mailto:hello@letsgetsteadi.com" class="footer__contact-email">hello@letsgetsteadi.com</a>
         </div>
       </div>
       <div class="footer__divider" aria-hidden="true"></div>
