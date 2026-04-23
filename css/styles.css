@@ -782,6 +782,20 @@ ul, ol {
   font-weight: 300;
 }
 
+.benefit-card__tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #d4edda;
+  color: #2d6a4f;
+  border-radius: 20px;
+  padding: 5px 14px;
+  margin-bottom: 18px;
+}
+
 .how-it-works__note {
   text-align: center;
   font-family: var(--font-heading);
