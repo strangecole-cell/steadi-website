@@ -1225,8 +1225,24 @@ ul, ol {
 }
 
 .founder-card__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 16px;
 }
+
+.founder-card__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(136, 163, 91, 0.3);
+}
+
+.founder-card__avatar--cole  { object-position: center 12%; }
+.founder-card__avatar--eric  { object-position: center 8%; }
+.founder-card__avatar--john  { object-position: center 15%; }
 
 .founder-card__name {
   font-family: var(--font-heading);
