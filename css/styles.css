@@ -1212,9 +1212,13 @@ ul, ol {
 
 .founders-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 32px;
   text-align: left;
+}
+
+.founder-card--full {
+  grid-column: 1 / -1;
 }
 
 .founder-card {
