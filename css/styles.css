@@ -515,6 +515,10 @@ ul, ol {
   color: rgba(33, 33, 32, 0.45);
 }
 
+.supp-facts__latin {
+  font-style: italic;
+}
+
 .supp-facts__footnote {
   font-size: 9px;
   color: rgba(33, 33, 32, 0.45);
