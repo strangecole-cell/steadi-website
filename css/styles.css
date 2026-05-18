@@ -1230,7 +1230,7 @@ ul, ol {
 
 .founders-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
   text-align: left;
 }
@@ -1265,6 +1265,7 @@ ul, ol {
 .founder-card__avatar--cole  { object-position: center 12%; }
 .founder-card__avatar--eric  { object-position: center 8%; }
 .founder-card__avatar--john  { object-position: center 15%; }
+.founder-card__avatar--lucia { object-position: center 10%; }
 
 .founder-card__name {
   font-family: var(--font-heading);
