@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tester Reimbursements — Steadi Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/logos/steadi-primary-wordmark-full-color-rgb.svg">
+
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body>
+
+  <header class="admin-header">
+    <div class="admin-header__inner">
+      <img src="../../assets/logos/steadi-primary-wordmark-full-color-rgb.svg" alt="Steadi" width="110" height="26">
+      <span class="admin-header__title">Tester Reimbursements</span>
+      <button id="sign-out" class="btn-admin btn-admin--ghost">Sign out</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div id="mode-banner"></div>
+    <div id="admin-list" class="admin-list">
+      <p class="admin-loading">Loading…</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="../../js/admin-shared.js"></script>
+  <script src="../../js/admin-tester-reimbursements.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* ============================================
+   STEADI — Admin Pages
+   ============================================ */
+
+.admin-login-card {
+  margin-top: 0;
+}
+
+.admin-header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid rgba(33, 33, 32, 0.08);
+  padding: 16px 24px;
+}
+
+.admin-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.admin-header__title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-carbon);
+}
+
+.admin-header__inner .btn-admin {
+  margin-left: auto;
+}
+
+.admin-main {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.mode-banner {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 10px 16px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.mode-banner--sandbox {
+  background-color: var(--color-soft-green);
+  color: #33502c;
+}
+
+.mode-banner--production {
+  background-color: #f6d9d3;
+  color: #7a2a1c;
+}
+
+.admin-loading,
+.admin-error,
+.admin-empty {
+  font-size: 14px;
+  color: rgba(33, 33, 32, 0.6);
+  padding: 16px 0;
+}
+
+.admin-error {
+  color: #c0503f;
+}
+
+.admin-section {
+  margin-bottom: 40px;
+}
+
+.admin-section h2 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: var(--color-carbon);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(33, 33, 32, 0.05);
+}
+
+.admin-table th,
+.admin-table td {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(33, 33, 32, 0.06);
+  white-space: nowrap;
+}
+
+.admin-table th {
+  background-color: var(--color-ivory);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 11px;
+  color: rgba(33, 33, 32, 0.6);
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-admin {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-admin:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-admin--approve {
+  background-color: var(--color-garden-green);
+  color: var(--color-white);
+}
+
+.btn-admin--reject {
+  background-color: transparent;
+  color: #c0503f;
+  border-color: #c0503f;
+}
+
+.btn-admin--ghost {
+  background-color: transparent;
+  color: var(--color-carbon);
+  border-color: rgba(33, 33, 32, 0.2);
+}
+
+@media (max-width: 768px) {
+  .admin-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

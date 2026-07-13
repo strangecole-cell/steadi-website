@@ -19,3 +19,14 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Tester reimbursement system secrets — never commit real keys
+.env
+.env.local
+
+# Never commit tester PII (Typeform exports, working copies, etc.)
+*.csv
+
+# Supabase CLI local state (created by `supabase link`)
+supabase/.temp/
+supabase/.branches/

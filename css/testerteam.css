@@ -1,0 +1,117 @@
+/* ============================================
+   STEADI — Tester Reimbursement Page
+   ============================================ */
+
+.tester-form-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-ivory);
+  padding: calc(var(--nav-height) + 48px) 24px 64px;
+}
+
+.tester-form-card {
+  background-color: var(--color-white);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 20px 60px rgba(33, 33, 32, 0.08);
+}
+
+.tester-form__title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--color-carbon);
+  margin-bottom: 16px;
+}
+
+.tester-form__subtext {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(33, 33, 32, 0.75);
+  margin-bottom: 36px;
+}
+
+.tester-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tester-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tester-form__field label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-carbon);
+}
+
+.tester-form__field input {
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 14px 16px;
+  border: 1px solid rgba(33, 33, 32, 0.15);
+  border-radius: 12px;
+  background-color: var(--color-white);
+  color: var(--color-carbon);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tester-form__field input:focus {
+  outline: none;
+  border-color: var(--color-garden-green);
+  box-shadow: 0 0 0 3px rgba(136, 163, 91, 0.15);
+}
+
+.tester-form__field input:invalid:not(:placeholder-shown) {
+  border-color: #c0503f;
+}
+
+.tester-form__field input[aria-invalid="true"] {
+  border-color: #c0503f;
+}
+
+.tester-form__submit {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.tester-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.tester-form__message {
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 20px;
+  padding-top: 4px;
+}
+
+.tester-form__message.is-success {
+  color: var(--color-garden-green);
+  font-weight: 600;
+}
+
+.tester-form__message.is-error {
+  color: #c0503f;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .tester-form-card {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .tester-form__title {
+    font-size: 26px;
+  }
+}

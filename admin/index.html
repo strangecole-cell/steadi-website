@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login — Steadi</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/logos/steadi-primary-wordmark-full-color-rgb.svg">
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/testerteam.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <main class="tester-form-page">
+    <div class="container container--narrow">
+      <div class="tester-form-card admin-login-card">
+        <h1 class="tester-form__title">Admin Login</h1>
+        <p class="tester-form__subtext">Tester reimbursement review — authorized access only.</p>
+
+        <form id="admin-login-form" class="tester-form" novalidate>
+          <div class="tester-form__field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="username" required>
+          </div>
+
+          <div class="tester-form__field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" autocomplete="current-password" required>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--large tester-form__submit">Sign In</button>
+
+          <p class="tester-form__message" id="login-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="../js/admin-shared.js"></script>
+  <script src="../js/admin-login.js"></script>
+</body>
+</html>
