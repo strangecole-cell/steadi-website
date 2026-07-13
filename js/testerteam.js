@@ -15,7 +15,7 @@
   var FUNCTION_URL = SUPABASE_URL + '/functions/v1/submit-reimbursement';
 
   var GENERIC_ERROR = 'We could not verify this submission. Please check your information and try again.';
-  var SUCCESS_MESSAGE = 'Your reimbursement request has been received. Once approved, your $40 reward will be sent to your email through Tremendous.';
+  var SUCCESS_MESSAGE = 'Your reimbursement request has been received. Once approved, your $45 reward will be sent to your email through Tremendous.';
   var NETWORK_ERROR = 'Something went wrong on our end. Please try again in a moment.';
 
   document.addEventListener('DOMContentLoaded', init);

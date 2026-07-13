@@ -155,7 +155,7 @@ async function processPayout(
 
   const { data: tester } = await supabase
     .from("approved_testers")
-    .select("full_name, email")
+    .select("full_name, email, reimbursement_amount")
     .eq("id", testerId)
     .maybeSingle();
 
@@ -176,6 +176,7 @@ async function processPayout(
     requestId,
     recipientName: tester.full_name,
     recipientEmail: tester.email,
+    amountUsd: Number(tester.reimbursement_amount),
   });
 
   if (!result.ok) {

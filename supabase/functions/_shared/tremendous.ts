@@ -1,9 +1,8 @@
-const REWARD_AMOUNT_USD = 40;
-
 interface SendRewardParams {
   requestId: string;
   recipientName: string;
   recipientEmail: string;
+  amountUsd: number;
 }
 
 interface SendRewardResult {
@@ -14,8 +13,9 @@ interface SendRewardResult {
   errorMessage?: string;
 }
 
-// Sends the $40 reward to the tester's approved email (never the submitted
-// email — the caller must pass the approved_testers.email value). Uses an
+// Sends the reward (amount comes from the tester's own record, never a
+// hardcoded value) to the tester's approved email — never the submitted
+// email; the caller must pass the approved_testers.email value. Uses an
 // Idempotency-Key derived from the reimbursement request's own id, so
 // retrying a failed/aborted attempt reuses the same Tremendous order
 // instead of creating a second reward.
@@ -37,7 +37,7 @@ export async function sendTremendousReward(params: SendRewardParams): Promise<Se
     external_id: idempotencyKey,
     payment: { funding_source_id: "balance" },
     reward: {
-      value: { denomination: REWARD_AMOUNT_USD, currency_code: "USD" },
+      value: { denomination: params.amountUsd, currency_code: "USD" },
       campaign_id: campaignId,
       recipient: { name: params.recipientName, email: params.recipientEmail },
       delivery: { method: "EMAIL" },
